@@ -1,0 +1,5 @@
+I approach this challenge using AWS CodeDeploy for which I create a seriverole with limitted user permissions using IAM role,  setting up IAM instance profile for Amazon EC2 instance.
+For an EC2 instance running windows server, I would add inbound rule under Security groups that allows HTTP traffic with configured ports.
+And then added  the html code in index.html file, application specific details for codeDeploy in appsec.yml file and a .bat file for the installation in the same folder.
+Upload the application to S3 bucket and register the application with code deploy using create-application command.
+Now use the CodeDeploy push command to deploy the application.
