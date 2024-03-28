@@ -1,0 +1,22 @@
+Explanation:
+
+Used  re module for regular expressions.
+is_valid_credit_card function:
+Takes a credit card number as input.
+Defines a regular expression pattern (pattern) to check for:
+Starting with 4 and having 12 or 15 digits (Visa)
+Starting with 5 or 6 and having 14 digits (Mastercard/other)
+Uses re.match to see if the entire card number matches the pattern.
+If the pattern doesn't match, it returns "Invalid".
+It iterates through digits (1 to 9) and checks if there are 4 consecutive repetitions using a string comparison. If found, it returns "Invalid".
+It uses re.search to check if any character other than digits and hyphen exists. If found, it returns "Invalid".
+If all checks pass, it returns "Valid".
+Main program:
+Gets the number of test cases.
+Loops through each test case, reads the card number, and calls the is_valid_credit_card function.
+Prints the returned result ("Valid" or "Invalid").
+This code addresses the issues mentioned in the examples:
+
+It checks for consecutive repeated digits (more than 3).
+It validates separators, ensuring only hyphens are used.
+It combines the best aspects of previous responses for clarity and efficiency.
